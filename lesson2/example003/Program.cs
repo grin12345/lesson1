@@ -4,7 +4,7 @@
     int index = 0;
     while (index < length)
     {
-        collection[index] = new Random().Next(1, 5);
+        collection[index] = new Random().Next(1, 10);
         index++;
     }
 }
@@ -20,6 +20,26 @@ void PrintArray(int [] col)
     }
  }
 
- int []array = new int [5];
+int Indexof(int[] collection, int find)
+{
+    int count = collection.Length;
+    int index = 0;
+    int position = -1;
+    while (index < count)
+    {
+        if(collection[index] == find)
+        {
+            position = index;
+            break;
+        }
+        index++;
+    }
+    return position;
+}
+ int []array = new int [10];
  FillArray (array);
  PrintArray (array);
+ Console.WriteLine (); // пустая строчка
+
+ int pos = Indexof (array, 4); //переманная pos - положим результат работы indexof, в качестве аргумента - массив array, будем искать позицию элемента со значением 4
+ Console.WriteLine (pos);
