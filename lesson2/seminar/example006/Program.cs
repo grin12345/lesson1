@@ -2,12 +2,19 @@
 int a = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
 int b = int.Parse(Console.ReadLine());
-int res = a%b;
-if (res == 0)
+if (b==0) 
 {
-    Console.WriteLine ("кратно");
+    Console.WriteLine ("введите число не равное 0");
 }
 else
 {
-     Console.WriteLine ("не кратно, остаток " +res);
-   }
+    int res = a%b;
+    if (res == 0)
+    {
+        Console.WriteLine ("кратно");
+    }
+    else
+    {
+        Console.WriteLine ("не кратно, остаток " +res);
+    }
+}
